@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dodo Sushi</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
+      integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="mobile-nav">
+        <!-- Hamburger start -->
+        <div class="nav-left">
+          <button class="hamburger hamburger--spring" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+
+          <a href="./index.html"
+            ><img src="./assets/logo_white.png" alt="logo"
+          /></a>
+        </div>
+        <div>
+          <a href="./cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <div>
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./order.html">
+              <div>
+                <i class="fas fa-shopping-bag"></i>
+                <span>Order</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html">
+              <div>
+                <i class="fas fa-mobile-alt"></i>
+                <span>Contact</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./profile.html">
+              <div>
+                <i class="fas fa-user"></i>
+                <span>My profile</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="language">
+          <i class="fas fa-globe"></i>
+          <select name="language" id="language">
+            <option value="english">English</option>
+            <option value="japanese">Japanese</option>
+            <option value="te reo māori">Te reo Māori</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h3 class="summary-title">Order Summary</h3>
+      <div class="order-details">
+        <a href="./order.html" class="cart-cancel">X</a>
+        <img src="./assets/tempura_set.png" alt="picture" />
+        <div class="meal-text">
+          <h3>Tempura Set</h3>
+          <div class="meal-description">Vege with prawn</div>
+          <a href="./order.html" class="btn btn-secondary btn-sm">Edit</a>
+        </div>
+        <div class="meal-quantity">1</div>
+        <div class="meal-price">$14.50</div>
+      </div>
+
+      <div class="cart-bottom">
+        <div>total</div>
+        <div>$14.50</div>
+      </div>
+
+      <hr class="divider" />
+      <h2 class="page-name">Checkout</h2>
+
+      <!-- form starts here -->
+      <form class="checkout-form" action="./confirmation.html">
+        <div class="form-group">
+          <label for="email">Email*</label><br />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="dodosushi3@gmail.com"
+            required
+          />
+        </div>
+
+        <hr class="divider" />
+        <div class="form-group">
+          <label for="pickup-time">Time of Pick Up*</label><br />
+          <input type="checkbox" id="pickup-asap" name="pickup-asap" />
+          <label for="pickup-asap">Pick Up ASAP</label><br />
+          <input
+            type="text"
+            name="pickup-time"
+            id="pickup-time"
+            placeholder="DD/MM 12:00"
+          />
+        </div>
+
+        <hr class="divider" />
+        <div class="form-group">
+          <label for="ccn">Credit Card Number*</label><br />
+          <input
+            type="text"
+            inputmode="numeric"
+            class="ccFormatMonitor"
+            placeholder="xxxx xxxx xxxx xxxx"
+            required
+          /><br />
+
+          <label for="expiry-date">Expiry Date*</label><br />
+          <input
+            type="text"
+            id="inputExpDate"
+            placeholder="MM/YY"
+            maxlength="5"
+            required
+          />
+
+          <input type="password" class="cvc" placeholder="CVC" required /><br />
+
+          <label for="billing-address">Billing Address*</label><br />
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="123 Main Street, Takapuna, Auckland"
+            required
+          /><br />
+
+          <input type="checkbox" id="pay-info" name="pay-info" />
+          <label for="pay-info">Save payment method</label><br />
+        </div>
+
+        <div class="purchase-button">
+          <input type="submit" value="Purchase" class="btn btn-full" />
+        </div>
+      </form>
+    </main>
+    <script src="./js/hamburger.js"></script>
+  </body>
+</html>

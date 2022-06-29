@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xero</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .container {
+        background-color: rgb(187, 243, 253);
+        color: rgb(33, 59, 85);
+        margin: 60px 40px;
+        display: flex;
+        justify-content: center;
+        font-family: "Roboto", Helvetica, sans-serif;
+      }
+
+      .card {
+        background-color: snow;
+        border-radius: 5px;
+        width: 300px;
+        margin: 100px 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      .price {
+        font-size: 60px;
+        text-align: center;
+      }
+
+      .dollar-mark {
+        font-size: 30px;
+      }
+
+      .point-fifty {
+        font-size: 30px;
+        vertical-align: super;
+      }
+
+      .price-GST {
+        text-align: center;
+        font-weight: 200;
+        font-size: 14px;
+        color: rgb(70, 70, 70);
+        margin: 0;
+        margin-bottom: 20px;
+      }
+
+      .plan-summary {
+        text-align: center;
+        width: 75%;
+        font-size: 18px;
+        color: rgb(56, 56, 56);
+        margin: auto;
+      }
+
+      .plan-details {
+        list-style: none;
+      }
+
+      .tick {
+        list-style-image: url("./images/tick.png");
+      }
+
+      .cross {
+        list-style-image: url("./images/cross.png");
+      }
+
+      .circleup {
+        list-style-image: url("./images/circleup.png");
+      }
+
+      .optional-details {
+        list-style: none;
+      }
+
+      .button {
+        color: rgb(23, 44, 64);
+        text-decoration: none;
+        background-color: rgb(80, 220, 170);
+        padding: 8px 12px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 6px;
+        transition: all 1s;
+      }
+
+      .button:hover {
+        background-color: rgb(74, 196, 157);
+        color: black;
+      }
+
+      .premium {
+        text-align: center;
+        margin-top: 10px;
+        color: darkblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <!-- start card element -->
+        <div class="card">
+          <h1 class="plan-name">Starter</h1>
+          <h2 class="price">
+            <span class="dollar-mark">$</span>27<span class="point-fifty"
+              >.50</span
+            >
+          </h2>
+          <h3 class="price-GST">NZD per month excluding GST</h3>
+          <p class="plan-summary">
+            Good for sole traders, new businesses, and the self-employed.
+          </p>
+
+          <ul class="plan-details">
+            <li class="tick">Send quotes and 20 invoices</li>
+            <li class="tick">Enter 5 bills</li>
+            <li class="tick">Reconcile bank transactions</li>
+            <li class="tick">Capture bills and receipts with Hubdoc</li>
+            <li class="tick">Short-term cash flow and business snapshot</li>
+            <li class="cross">Bulk reconcile transactions</li>
+            <li class="cross">Use multiple currencies</li>
+            <li class="cross">Claim expenses</li>
+          </ul>
+
+          <h4 class="optional">Optional add-ons</h4>
+          <ul class="optional-details">
+            <li class="circleup">
+              <a href="#">Payroll</a>
+              from $10 per month
+            </li>
+            <li class="circleup">
+              <a href="#">Track projects</a>
+              from $10 per user
+            </li>
+            <li class="circleup">
+              <a href="#">Analytics Plus</a>
+              free until 31 January 2022
+            </li>
+          </ul>
+
+          <a
+            class="button"
+            href="https://www.xero.com/nz/signup/starter/"
+            target="blank"
+          >
+            Buy Now
+          </a>
+          <a
+            class="premium"
+            href="https://www.xero.com/nz/pricing-plans/premium/"
+            target="blank"
+          >
+            Learn about the premium plan
+          </a>
+        </div>
+        <!-- end card element -->
+        <div class="card">
+          <h1 class="plan-name">Standard</h1>
+          <h2 class="price"><span class="dollar-mark">$</span>60</h2>
+          <h3 class="price-GST">NZD per month excluding GST</h3>
+          <p class="plan-summary">Good for growing small businesses.</p>
+
+          <ul class="plan-details">
+            <li class="tick">Send invoices and quotes</li>
+            <li class="tick">Enter bills</li>
+            <li class="tick">Expenses for 1 person</li>
+            <li class="tick">Capture bills and receipts with Hubdoc</li>
+            <li class="tick">Bulk reconcile transactions</li>
+            <li class="tick">Short-term cash flow and business snapshot</li>
+            <li class="cross">Use multiple currencies</li>
+          </ul>
+
+          <h4 class="optional">Optional add-ons</h4>
+          <ul class="optional-details">
+            <li class="circleup">
+              <a href="#">Claim expenses</a>
+              from $5 per user
+            </li>
+            <li class="circleup">
+              <a href="#">Payroll</a>
+              from $10 per user
+            </li>
+            <li class="circleup">
+              <a href="#">Track projects</a>
+              from $10 per user
+            </li>
+            <li class="circleup">
+              <a href="#">Analytics Plus</a>
+              free until 31 January 2022
+            </li>
+          </ul>
+          <a
+            class="button"
+            href="https://www.xero.com/nz/signup/starter/"
+            target="blank"
+          >
+            Buy Now
+          </a>
+          <a
+            class="premium"
+            href="https://www.xero.com/nz/pricing-plans/premium/"
+            target="blank"
+          >
+            Learn about the premium plan
+          </a>
+        </div>
+        <!-- end card element -->
+        <div class="card">
+          <h1 class="plan-name">Premium</h1>
+
+          <h2 class="price"><span class="dollar-mark">$</span>75</h2>
+          <h3 class="price-GST">NZD per month excluding GST</h3>
+          <p class="plan-summary">
+            Good for established businesses of all sizes.
+          </p>
+
+          <ul class="plan-details">
+            <li class="tick">Send invoices and quotes</li>
+            <li class="tick">Enter bills</li>
+            <li class="tick">Reconcile bank transactions</li>
+            <li class="tick">Expenses for 1 person</li>
+            <li class="tick">Capture bills and receipts with Hubdoc</li>
+            <li class="tick">Bulk reconcile transactions</li>
+            <li class="tick">Use multiple currencies</li>
+            <li class="tick">Short-term cash flow and business snapshot</li>
+          </ul>
+
+          <h4 class="optional">Optional add-ons</h4>
+          <ul class="optional-details">
+            <li class="circleup">
+              <a href="#">Claim expenses</a>
+              from $5 per user
+            </li>
+            <li class="circleup">
+              <a href="#">Payroll</a>
+              from $10 per user
+            </li>
+            <li class="circleup">
+              <a href="#">Track projects</a>
+              from $10 per user
+            </li>
+            <li class="circleup">
+              <a href="#">Analytics Plus</a>
+              free until 31 January 2022
+            </li>
+          </ul>
+
+          <a
+            class="button"
+            href="https://www.xero.com/nz/signup/starter/"
+            target="blank"
+          >
+            Buy Now
+          </a>
+
+          <a
+            class="premium"
+            href="https://www.xero.com/nz/pricing-plans/premium/"
+            target="blank"
+          >
+            Learn about the premium plan
+          </a>
+        </div>
+      </div>
+      <!-- end card element -->
+    </main>
+  </body>
+</html>

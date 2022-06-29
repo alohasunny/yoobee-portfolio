@@ -1,0 +1,81 @@
+const userInputs = {
+  guestCount: 1,
+  nightCount: 0,
+  startDate: "",
+  endDate: "",
+  accom: null,
+  meal: null,
+};
+
+const accommodations = {
+  hilton: {
+    name: "Hilton Hotel",
+    address: "448 Hilton Road, Auckland 0101",
+    price: 157,
+    type: "hotel",
+    image: "hilton.jpeg",
+  },
+  city: {
+    name: "City Hotel",
+    address: "885 City Street, Auckland 0101",
+    price: 157,
+    type: "hotel",
+    image: "cityhotel.jpeg",
+  },
+  cordis: {
+    name: "Cordis",
+    address: "8 Simon Street, Auckland 1010",
+    price: 157,
+    type: "hotel",
+    image: "cordis.jpeg",
+  },
+  park: {
+    name: "Park Hotel",
+    address: "4747 Oak Road, Auckland 7574",
+    price: 157,
+    type: "hotel",
+    image: "parkhotel.jpeg",
+  },
+  albert: {
+    name: "Mt Albert Motor Lodge",
+    address: "121 Albert Street, Auckland 0212",
+    price: 90,
+    type: "motel",
+    image: "albert.jpeg",
+  },
+  airport: {
+    name: "Auckland Airport Motel",
+    address: "7474 Aiport Lane, Auckland 3222",
+    price: 90,
+    type: "motel",
+    image: "airport.jpeg",
+  },
+  greenlane: {
+    name: "Greenlane Motel",
+    address: "4422 Apple Valley Road, Auckland 0622",
+    price: 90,
+    type: "motel",
+    image: "greenlane.jpeg",
+  },
+  backpackers: {
+    name: "Queen Street Backpackers",
+    address: "7474 Queen Street, Auckland 1010",
+    price: 30,
+    type: "hostel",
+    image: "hostel.png",
+  },
+  blue: {
+    name: "Blue House",
+    address: "434 Blue Street, Auckland 3631",
+    price: 240,
+    type: "house",
+    image: "house.png",
+  },
+  red: {
+    name: "Red House",
+    address: "123 Red Road, Auckland 8542",
+    price: 240,
+    type: "house",
+    image: "red.jpeg",
+  },
+};

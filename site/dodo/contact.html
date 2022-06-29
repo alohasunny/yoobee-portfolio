@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dodo Sushi</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
+      integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="mobile-nav">
+        <!-- Hamburger start -->
+        <div class="nav-left">
+          <button class="hamburger hamburger--spring" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+
+          <a href="./index.html"
+            ><img src="./assets/logo_white.png" alt="logo"
+          /></a>
+        </div>
+        <div>
+          <a href="./cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <div>
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./order.html">
+              <div>
+                <i class="fas fa-shopping-bag"></i>
+                <span>Order</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html">
+              <div>
+                <i class="fas fa-mobile-alt"></i>
+                <span>Contact</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./profile.html">
+              <div>
+                <i class="fas fa-user"></i>
+                <span>My profile</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="language">
+          <i class="fas fa-globe"></i>
+          <select name="language" id="language">
+            <option value="english">English</option>
+            <option value="japanese">Japanese</option>
+            <option value="te reo māori">Te reo Māori</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h2 class="page-name">Our Info</h2>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="far fa-clock"></i>
+          <div>
+            Mon-Tue, Thu-Sat : 9:30am - 7:30pm<br />
+            Wed : 9:30am - 7pm<br />
+            Sun : Closed
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-mobile-alt"></i>
+          <div>09-488 7527</div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            448 Lake Road, Takapuna,<br />
+            Auckland 0622
+          </div>
+        </div>
+
+        <img src="./assets/map.png" alt="map" />
+      </div>
+      <hr class="contact-divider" />
+
+      <!-- form starts here -->
+      <h2 class="page-name">Contact Form</h2>
+
+      <form class="contact-form" action="./thankyou.html">
+        <div class="form-row">
+          <label for="name">Name*</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+
+          <div class="form-row">
+            <label for="email">Email*</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="dodosushi3@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="form-row"></div>
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            id="tel"
+            pattern="[0-9]{11}"
+            placeholder="### #### ####"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message*</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="5"
+            placeholder="Please enter your message here"
+            required
+          ></textarea>
+        </div>
+
+        <input type="submit" class="btn btn-full" value="Submit" />
+      </form>
+    </main>
+
+    <script src="./js/hamburger.js"></script>
+  </body>
+</html>

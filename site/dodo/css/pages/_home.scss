@@ -1,0 +1,29 @@
+.dodo-pic {
+  width: 375px;
+}
+
+.welcome-text {
+  margin: 10px;
+  text-align: center;
+
+  h2 {
+    color: $red-500;
+    font-size: 36;
+  }
+
+  p {
+    color: $gray-700;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.btn-red {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.menu-pic {
+  width: 90%;
+  margin: 20px;
+  margin-top: 0px;
+}

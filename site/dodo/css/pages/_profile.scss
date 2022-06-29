@@ -1,0 +1,82 @@
+.account-header {
+  text-align: center;
+
+  h3 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .signout {
+    color: $gray-700;
+    font-size: 10px;
+  }
+}
+
+.sub-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  font-size: 14px;
+  text-align: center;
+  color: $gray-500;
+}
+
+:last-of-type .sub-text {
+  margin-bottom: 40px;
+}
+
+.reorder-container {
+  margin: 20px;
+}
+
+.order-item img {
+  width: 90px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.order-text {
+  h3 {
+    color: $gray-900;
+    font-size: 16px;
+    margin: 0;
+  }
+  .item-price {
+    font-size: 14px;
+    color: $gray-500;
+    margin: 0;
+    margin-top: 5px;
+  }
+}
+
+.reorder-button {
+  button {
+    padding: 5px 10px;
+    color: white;
+    background-color: $red-500;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+  }
+}
+
+.order-left {
+  display: flex;
+  align-items: center;
+
+  .order-text {
+    margin-left: 10px;
+  }
+}

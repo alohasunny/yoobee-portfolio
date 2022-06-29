@@ -1,0 +1,16 @@
+Schedule
+Find the times and places when your favourite artists are playing!
+
+Artist	Venue	Date	Start	End
+Rihanna	Wellington Theatre	1st August 2015	7:00pm	10:25pm
+Sam Smith	Auckland Theatre	2nd August 2015	8:00pm	10:30pm
+Maroon 5	Hamilton Theatre	3rd August 2015	2:00pm	3:45pm
+OMI	Taupo Theatre	4th August 2015	5:00pm	8:30pm
+Ellie Goulding	Rotorua Theatre	5th August 2015	8:00pm	11:45pm
+Mark Ronson	Invercargill Theatre	6th August 2015	8:30pm	9:30pm
+The Weekend	Tauranga Theatre	7th August 2015	8:00pm	9:00pm
+Lunchmoney Lewis	Hastings Theatre	8th August 2015	2:00pm	4:00pm
+James Bay	Napier Theatre	9th August 2015	5:30pm	8:30pm
+Rihanna	Palmerston North Theatre	10th August 2015	1:00pm	4:45pm
+Major Lazer	Wellington Theatre	11th August 2015	8:45pm	9:45pm
+Hozier	Auckland Theatre	12th August 2015	8:00pm	11:30pm

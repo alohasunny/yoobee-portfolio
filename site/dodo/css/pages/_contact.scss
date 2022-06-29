@@ -1,0 +1,48 @@
+.contact-info {
+  margin: 20px;
+  img {
+    width: 100%;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+
+  i {
+    margin-right: 15px;
+  }
+}
+
+.contact-divider {
+  border: 1px solid $gray-100;
+}
+
+.contact-form {
+  margin: 20px;
+
+  label {
+    color: $gray-500;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid $gray-400;
+    width: 315px;
+  }
+
+  ::placeholder {
+    color: $gray-300;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+}

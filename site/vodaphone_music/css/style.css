@@ -1,0 +1,117 @@
+/* Learned from https://css-tricks.com/perfect-full-page-background-image/ */
+html {
+  background: url(../img/background.jpg);
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 200;
+  color: rgb(88, 88, 88);
+}
+
+header {
+  background-color: #333;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+}
+header img {
+  padding-right: 20px;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  width: 63%;
+  padding: 10px 8px;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: purple;
+  color: white;
+  padding: 4px;
+  font-size: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 200;
+  color: rgb(88, 88, 88);
+}
+
+tr:nth-child(even) {
+  background-color: rgb(223, 223, 223);
+}
+
+td:first-child {
+  font-weight: 700;
+}
+
+@media (max-width: 919px) {
+  .header-images {
+    display: none;
+  }
+  .container {
+    width: 75%;
+  }
+  th,
+  td {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 810px) {
+  .container {
+    width: 80%;
+  }
+  th,
+  td {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 648px) {
+  .container {
+    width: 85%;
+  }
+  th,
+  td {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+  th,
+  td {
+    font-size: 4px;
+  }
+}

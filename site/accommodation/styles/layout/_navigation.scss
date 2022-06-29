@@ -1,0 +1,46 @@
+nav {
+  border-bottom: 1px solid $gray-100;
+  padding: 15px 20px 10px 20px;
+
+  .payment-header,
+  .details-header,
+  .confirmation-header {
+    h2 {
+      margin: auto;
+    }
+  }
+}
+
+#index-nav {
+  padding: 0;
+  border-bottom: none;
+}
+
+.nav-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.selected-dates-guests {
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: fit-content;
+  border-radius: 10px;
+  margin: auto;
+  padding: 0px 15px 15px 15px;
+
+  span {
+    text-decoration: none;
+    font-size: 12px;
+    color: $gray-900;
+  }
+
+  .divider {
+    width: 1px;
+    margin: 0px 15px;
+    background-color: $gray-300;
+  }
+}

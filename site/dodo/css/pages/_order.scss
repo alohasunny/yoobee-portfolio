@@ -1,0 +1,59 @@
+main {
+  margin: auto;
+}
+
+.pickup-time {
+  font-size: 13px;
+  color: hsla(0, 0%, 100%, 1);
+  text-align: center;
+  margin: auto;
+  background-color: $gray-400;
+  width: 140px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 40px;
+}
+
+.menu-container {
+  margin: 20px;
+}
+
+.menu-item img {
+  width: 100px;
+}
+
+.menu-item {
+  display: flex;
+  margin-top: 20px;
+}
+
+.menu-text {
+  margin-left: 20px;
+
+  h3 {
+    color: $gray-900;
+    font-size: 16px;
+    margin: 0;
+  }
+  .item-price {
+    font-size: 14px;
+    color: $gray-500;
+    margin: 0;
+    margin-top: 5px;
+  }
+}
+
+.deal-label {
+  background-color: $red-500;
+  width: 66px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: hsla(0, 0%, 100%, 1);
+  text-align: center;
+  margin-top: 5px;
+  padding: 2px;
+}
+
+.my-meal {
+  cursor: pointer;
+}

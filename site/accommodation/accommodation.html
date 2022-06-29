@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Summative Accommodation</title>
+    <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- splide carousel library-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.1.9/dist/css/themes/splide-skyblue.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.1.9/dist/js/splide.min.js"></script>
+
+    <!-- Cleave -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+
+    <!-- litepicker library -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/plugins/mobilefriendly.js"></script>
+
+    <!-- Animate CSS Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav id="index-nav">
+        <img class="logo" src="./assets/logo.png" alt="auckland logo" />
+      </nav>
+
+      <nav id="selection-nav" class="hidden">
+        <div class="nav-flex">
+          <div>
+            <span class="back-arrow"><i class="fas fa-chevron-left"></i></span>
+          </div>
+          <div class="selected-dates-guests">
+            <span class="selected-dates"></span>
+            <div class="divider"></div>
+            <span class="selected-guests"></span>
+          </div>
+        </div>
+        <ul class="type-checkbox">
+          <li>
+            <input
+              type="checkbox"
+              name="category"
+              value="search"
+              data-term="hotel"
+              checked
+            />Hotel
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="category"
+              value="search"
+              data-term="motel"
+              checked
+            />Motel
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="category"
+              value="search"
+              data-term="hostel"
+              checked
+            />Hostel
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="category"
+              value="search"
+              data-term="house"
+              checked
+            />House
+          </li>
+        </ul>
+      </nav>
+
+      <nav id="details-nav" class="hidden">
+        <div class="details-header">
+          <div class="nav-flex">
+            <div>
+              <span class="back-arrow"
+                ><i class="fas fa-chevron-left"></i
+              ></span>
+            </div>
+            <h2>Accommodation Details</h2>
+          </div>
+        </div>
+      </nav>
+
+      <nav id="payment-nav" class="hidden">
+        <!-- payment_page header -->
+        <div class="payment-header">
+          <div class="nav-flex">
+            <div>
+              <span class="back-arrow"
+                ><i class="fas fa-chevron-left"></i
+              ></span>
+            </div>
+            <h2>Finalize Your Booking</h2>
+          </div>
+        </div>
+      </nav>
+
+      <nav id="confirmation-nav" class="hidden">
+        <!-- confirmation header -->
+        <div class="confirmation-header">
+          <div class="nav-flex">
+            <h2>Booking Confirmation</h2>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- index -->
+    <section id="index">
+      <h2 class="headline">Find and book accomodation in Auckland</h2>
+
+      <div class="imgs-wrapper">
+        <div id="thumbnail-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./assets/auckland1.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland2.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland3.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland4.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland5.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland6.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland7.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland8.png" alt="Auckland landscape" />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/auckland9.png" alt="Auckland landscape" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="box guests-input">
+        <div class="label">GUESTS</div>
+
+        <ul>
+          <li class="guest-num">
+            <input type="radio" name="guest-num" value="1" checked />1
+          </li>
+          <li class="guest-num">
+            <input type="radio" name="guest-num" value="2" />2
+          </li>
+          <li class="guest-num">
+            <input type="radio" name="guest-num" value="3" />3
+          </li>
+          <li class="guest-num">
+            <input type="radio" name="guest-num" value="4" />4
+          </li>
+        </ul>
+      </div>
+      <div class="box dates-input">
+        <div class="check-in-out">
+          <div class="label">CHECK IN</div>
+          <div class="placeholder" id="start-date">Add Date</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="check-in-out">
+          <div class="label">CHECK OUT</div>
+          <div class="placeholder" id="end-date">Add Date</div>
+        </div>
+      </div>
+
+      <button class="icon-btn btn" id="search-btn">
+        <i class="fas fa-search"></i>SEARCH
+      </button>
+    </section>
+
+    <!-- accommodation_select page -->
+    <section
+      id="search-results"
+      class="hidden animate__animated animate__fadeIn"
+    >
+      <h2 class="select-text">Select Your Accommodation Type</h2>
+
+      <div class="accom-wrapper"></div>
+    </section>
+
+    <!-- details starts here -->
+    <section id="accom-details" class="details hidden">
+      <h2 class="hidden">Accommodation Search Results</h2>
+      <div class="accom-card">
+        <img src="./assets/hilton.jpeg" alt="hilton hotel" />
+        <div class="accom-info">
+          <div class="accom-name">Hilton Hotel</div>
+          <div class="accom-address">448 City Road, Auckland 0622</div>
+          <br />
+
+          <div class="booking-details">Your Booking Details</div>
+          <div class="booking-dates">25 Nov-30 Nov (4 nights)</div>
+          <div class="guest-number">1 guest</div>
+          <div class="prices items-baseline">
+            <div class="night-price">$157 /night</div>
+            <div class="total-price">$0 total</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="meal-options">Select Meal Options:</label><br />
+        <select name="option" id="meal-options">
+          <option value="none" selected>Select a meal option</option>
+          <option value="breakfast">Breakfast: $20/night (per guest)</option>
+          <option value="lunch">Lunch $25/night (per guest)</option>
+          <option value="dinner">Dinner $30/night (per guest)</option>
+        </select>
+      </div>
+
+      <button class="btn" id="reserve-btn">RESERVE</button>
+    </section>
+
+    <!-- payments starts here -->
+    <section
+      id="payment"
+      class="payment hidden animate__animated animate__fadeIn animate__slow"
+    >
+      <h3><i class="fas fa-hotel"></i>Step 1: Accommodation Details</h3>
+      <div class="accom-card confirmed-details">
+        <img src="./assets/hilton.jpeg" alt="hilton hotel" />
+        <div class="booking-info">
+          <div class="accom-name">Hilton Hotel</div>
+          <div class="accom-address">448 City Road, Auckland 0622</div>
+        </div>
+      </div>
+      <br />
+
+      <div class="accom-card booking-summary">
+        <h3 class="summary-text">Summary</h3>
+        <div class="summary-details">
+          <div class="night-guest flex">4 nights, 1 guest</div>
+          <div class="accom-total flex space-between items-baseline">
+            <div class="spec-name">Accommodation</div>
+            <div class="spec-price acc-total-price">NZ $785</div>
+          </div>
+          <div class="meal-total flex space-between items-baseline">
+            <div class="spec-name meal-name">Breakfast</div>
+            <div class="spec-price meal-total-price">NZ $80</div>
+          </div>
+          <div class="total-price flex space-between items-baseline">
+            <div class="spec-name">Total Price</div>
+            <div class="spec-price final-price">NZ $865</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <form class="guest-form" id="payment-form">
+        <div class="guest-details">
+          <h3><i class="fas fa-user"></i>Step 2: Your Details</h3>
+
+          <div class="form-group">
+            <label for="first-name">First name</label><br />
+            <input type="text" name="first-name" id="first-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last name</label><br />
+            <input type="text" name="last-name" id="last-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label><br />
+            <input type="text" name="email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Mobile Number</label><br />
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+        </div>
+        <br />
+        <hr />
+
+        <div class="payment-details">
+          <h3><i class="fas fa-lock"></i>Step 3: Payment Details</h3>
+
+          <div class="form-group">
+            <label for="first-name">First name</label><br />
+            <input
+              type="text"
+              name="first-name"
+              id="payment-first-name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last name</label><br />
+            <input
+              type="text"
+              name="last-name"
+              id="payment-last-name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="ccn">Credit card number</label><br />
+            <input
+              type="text"
+              id="ccn"
+              inputmode="numeric"
+              class="ccFormatMonitor"
+              placeholder="xxxx xxxx xxxx xxxx"
+              required
+            /><br />
+            <div class="flex space-between">
+              <div class="small-form">
+                <label for="inputExpDate">Expiry date</label><br />
+                <input
+                  type="text"
+                  id="inputExpDate"
+                  placeholder="MM/YY"
+                  maxlength="5"
+                  required
+                />
+              </div>
+              <div class="small-form">
+                <label for="cvc">CVC</label><br />
+                <input
+                  type="password"
+                  class="cvc"
+                  id="cvc"
+                  placeholder="CVC"
+                  required
+                /><br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+
+        <div class="dates flex space-between items-baseline">
+          <div class="checkin-label">Check-in</div>
+          <div class="checkin-date">Saturday, 25 November, 2021</div>
+        </div>
+        <div class="dates flex space-between items-baseline">
+          <div class="checkout-label">Check-out</div>
+          <div class="checkout-date">Saturday, 30 November, 2021</div>
+        </div>
+
+        <input type="submit" class="btn disabled" id="book-btn" value="Book" />
+      </form>
+    </section>
+
+    <!-- confirmation_page -->
+    <section
+      id="confirmation"
+      class="confirmation hidden animate__animated animate__fadeIn animate__slow"
+    >
+      <h2>Success!</h2>
+      <div class="top-text">Your accommodation has been booked.</div>
+
+      <div class="accom-card confirmed-details">
+        <img src="./assets/hilton.jpeg" alt="hilton hotel" />
+        <div class="booking-info">
+          <div class="accom-name">Hilton Hotel</div>
+          <div class="accom-address">448 City Road, Auckland 0622</div>
+        </div>
+      </div>
+      <br />
+
+      <div class="accom-card booking-summary">
+        <h3 class="summary-text">Booking Summary</h3>
+        <div class="summary-details">
+          <div class="night-guest flex">4 nights, 1 guest</div>
+          <div class="accom-total flex space-between items-baseline">
+            <div class="spec-name">Accommodation</div>
+            <div class="spec-price acc-total-price">NZ $785</div>
+          </div>
+          <div class="meal-total flex space-between items-baseline">
+            <div class="spec-name meal-name">Breakfast</div>
+            <div class="spec-price meal-total-price">NZ $80</div>
+          </div>
+          <div class="total-price flex space-between items-baseline">
+            <div class="spec-name">Total Price</div>
+            <div class="spec-price final-price">NZ $865</div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <p>We've sent a confirmation to your email.</p>
+      <p>Please show this to your accommodation upon arrival.</p>
+
+      <hr />
+      <button class="btn btn-home" id="return-home-btn">RETURN HOME</button>
+    </section>
+
+    <!-- scripts -->
+    <script src="./js/vendors/cleave-phone.nz.js"></script>
+    <script src="./js/vendors/splide.js"></script>
+    <script src="./js/utilities/strings.js"></script>
+    <script src="./js/utilities/dates.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/pages/index-results.js"></script>
+    <script src="./js/pages/details.js"></script>
+    <script src="./js/pages/payment.js"></script>
+    <script src="./js/pages/confirmation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+.summary-title {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.order-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+
+  img {
+    width: 75px;
+  }
+}
+
+.meal-text {
+  margin-left: -10px;
+  margin-right: 20px;
+
+  .meal-description {
+    font-size: 12px;
+    color: $gray-500;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+}
+
+.meal-price {
+  margin-right: 15px;
+}
+
+.cart-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  font-size: 12px;
+  padding-bottom: 20px;
+
+  div {
+    margin-left: 10px;
+    margin-right: 5px;
+    text-transform: uppercase;
+  }
+}
+
+.checkout-form {
+  margin: 20px;
+
+  label {
+    color: $gray-500;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid $gray-400;
+    width: 315px;
+  }
+
+  ::placeholder {
+    color: $gray-300;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+.purchase-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

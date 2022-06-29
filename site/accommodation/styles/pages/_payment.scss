@@ -1,0 +1,106 @@
+.payment {
+  h3 {
+    font-size: 18px;
+    padding: 15px 0px;
+  }
+
+  i {
+    padding-right: 10px;
+  }
+
+  hr {
+    border-top: 1px solid $gray-200;
+  }
+
+  .guest-form {
+    margin: 20px 20px 20px 0;
+    margin-bottom: 0;
+
+    label {
+      color: $gray-500;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="tel"] {
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 2px solid $gray-300;
+      width: 100%;
+    }
+
+    ::placeholder {
+      color: $gray-300;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  }
+
+  .dates {
+    padding: 15px 15px 0 15px;
+    font-size: 14px;
+
+    .checkin-date,
+    .checkout-date {
+      font-weight: 700;
+    }
+
+    .checkout-date {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+// accom-details & summary shared with confirmation_page
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  font-size: 14px;
+
+  .accom-name {
+    font-weight: 700;
+  }
+}
+
+.summary-text {
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 700;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 15px;
+  font-size: 14px;
+
+  .night-guest {
+    justify-content: end;
+    font-weight: 700;
+  }
+
+  .total-price {
+    border-top: 1px solid $gray-500;
+    padding: 10px 0;
+  }
+
+  .spec-price {
+    font-weight: 700;
+  }
+}
+
+.small-form {
+  width: 40%;
+}
+
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}

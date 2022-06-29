@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Wall</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: lightblue;
+        font-family: "Alfa Slab One", cursive;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .video-wrap {
+        display: grid;
+        width: 825px;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+
+      .video:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      .controls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+      .video {
+        position: relative;
+      }
+
+      .pause {
+        display: none;
+      }
+
+      video {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Wall of Video</h1>
+    <div class="video-wrap">
+      <!-- 1 -->
+      <div class="video">
+        <video
+          src="./videos/WellingtonCup2.mp4"
+          poster="./images/wellingtonracing_840x474.jpg"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="video">
+        <video
+          src="./videos/GisborneDistrictCouncil.mp4"
+          poster="./images/tirawhiti.png"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="video">
+        <video
+          src="./videos/TheAviatorExperiencev2.mp4"
+          poster="./images/aviator.png"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="video">
+        <video
+          src="./videos/PrettyPenny_30secB.mp4"
+          poster="./images/pretty.png"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="video">
+        <video
+          src="./videos/Bosch_chopped_v6.mp4"
+          poster="./images/bosch.png"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="video">
+        <video
+          src="./videos/sta_update_260418_first.mp4"
+          poster="./images/statravel.jpg"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="video">
+        <video
+          src="./videos/anderson-architectural-design-4.mp4"
+          poster="./images/home.png"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="video">
+        <video src="./videos/box.mp4" poster="./images/archi.png"></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="video">
+        <video
+          src="./videos/amp_today.mp4"
+          poster="./images/amp_596x335.jpg"
+        ></video>
+
+        <div class="controls">
+          <img class="play" src="./images/play.png" />
+          <img class="pause" src="./images/pause.png" />
+        </div>
+      </div>
+    </div>
+    <script>
+      var currentlyPlayingEle;
+
+      var allPlayButtonsArray = document.querySelectorAll(".play");
+      var allPauseButtonsArray = document.querySelectorAll(".pause");
+      var allVideoArray = document.querySelectorAll("video");
+
+      for (var i = 0; i < allPlayButtonsArray.length; i++) {
+        var element = allPlayButtonsArray[i];
+        element.addEventListener("click", playVideo);
+      }
+
+      for (var i = 0; i < allPauseButtonsArray.length; i++) {
+        var element = allPauseButtonsArray[i];
+        element.addEventListener("click", pauseVideo);
+      }
+
+      for (var i = 0; i < allVideoArray.length; i++) {
+        var element = allVideoArray[i];
+        element.addEventListener("click", toggleVideoDiv);
+      }
+
+      function toggleVideoDiv(event) {
+        var selectedVideo = event.target;
+        var playButton = selectedVideo.nextElementSibling.firstElementChild;
+        var pauseButton = selectedVideo.nextElementSibling.lastElementChild;
+
+        if (selectedVideo == currentlyPlayingEle) {
+          currentlyPlayingEle.pause();
+          currentlyPlayingEle = null;
+          pauseButton.style.display = "none";
+          playButton.style.display = "block";
+        } else if (
+          currentlyPlayingEle &&
+          selectedVideo != currentlyPlayingEle
+        ) {
+          currentlyPlayingEle.pause();
+          selectedVideo.play();
+
+          var cpPlayButton =
+            currentlyPlayingEle.nextElementSibling.firstElementChild;
+          var cpPauseButton =
+            currentlyPlayingEle.nextElementSibling.lastElementChild;
+          console.log(cpPlayButton);
+          console.log(cpPauseButton);
+
+          cpPauseButton.style.display = "none";
+          cpPlayButton.style.display = "block";
+
+          playButton.style.display = "none";
+          pauseButton.style.display = "block";
+
+          currentlyPlayingEle = selectedVideo;
+        } else {
+          selectedVideo.play();
+          currentlyPlayingEle = selectedVideo;
+          playButton.style.display = "none";
+          pauseButton.style.display = "block";
+        }
+      }
+
+      function playVideo(event) {
+        var self = event.target;
+        var parent = self.parentElement;
+        var video = parent.previousElementSibling;
+
+        // pause any previously playing video
+        if (currentlyPlayingEle) {
+          currentlyPlayingEle.pause();
+        }
+
+        video.play();
+        self.style.display = "none";
+        var pauseButton = self.nextElementSibling;
+        pauseButton.style.display = "block";
+        currentlyPlayingEle = video;
+      }
+
+      function pauseVideo(event) {
+        var self = event.target;
+        var parent = self.parentElement;
+        var video = parent.previousElementSibling;
+
+        video.pause();
+        self.style.display = "none";
+        var playButton = self.previousElementSibling;
+        playButton.style.display = "block";
+        currentlyPlayingEle = null;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Let's walk through playing and pausing a video: 
+
+Thoughts ! 
+There's the layout of course, and controlling the each video but the trickiest thing will be 
+to prevent  two videos playing simultaneously.  
+
+HINTS: 
+You'll need to attach video listeners to each video tag – you can think of each video tag as being a separate video player.  
+So you have 9 video players in one page. As one vide starts all the other video must be stopped/silenced.  
+
+Video Events: We may not need these event today. 
+Every Video has these two event. 
+     videoElement.addEventListener("pause", onBlah); - Fires when video has been paused 
+     videoElement.addEventListener("playing", onBlahBlah);  -  Fires when video is played  -->

@@ -1,0 +1,25 @@
+.btn {
+  padding: 15px 0;
+  color: white;
+  background-color: $orange-500;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 0px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.btn-sm {
+  width: fit-content;
+  padding: 5px 15px;
+}
+
+.btn-home {
+  color: $orange-500;
+  background-color: white;
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      --card-column-width: 1fr 3fr;
+      --card-padding-right: 10px;
+      --card-border: 1px solid lightgray;
+      margin: 20px;
+      font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(59, 59, 59);
+    }
+
+    .container {
+      width: 100%;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .one {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    /* .one:hover {
+        border: 2px solid blue;
+    } */
+
+    .two {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .three {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .four {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .five {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .six {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .seven {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .eight {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .nine {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .ten {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .eleven {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    .twelve {
+      background-color: snow;
+      display: grid;
+      grid-template-columns: var(--card-column-width);
+      padding-right: var(--card-padding-right);
+      border: var(--card-border);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 12px;
+      margin-top: 2px;
+      margin-bottom: 6px;
+      font-weight: 400;
+    }
+
+    p {
+      margin-top: 8px;
+      font-size: 14px;
+      font-family: "Lato", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="one">
+        <img class="photo" src="./peeps/anne.png" alt="Anne Thompson" />
+
+        <div class="info">
+          <h1>Anne Thompson</h1>
+          <h2>Head of School - Design Innovation</h2>
+          <p>
+            Anne worked at numerous agencies before establishing her own design
+            practice in London for eight years. Returning to New Zealand after
+            29 years living and working abroad, she fell into education while
+            enquiring at Massey University about doing a PGDip in design.
+          </p>
+        </div>
+      </div>
+
+      <div class="two">
+        <img class="photo" src="./peeps/dan.png" alt="Dan Watt" />
+
+        <div class="info">
+          <h1>Dan Watt</h1>
+          <h2>Head of School - Fashion & Sustainability</h2>
+          <p>
+            Dan completed his BA with a double major in English and Music at
+            Victoria University and his Diploma of Journalism at AUT University.
+            He worked as a freelance fashion designer in Wellington and Auckland
+            for seven years.
+          </p>
+        </div>
+      </div>
+
+      <div class="three">
+        <img class="photo" src="./peeps/dave.png" alt="Dave Ellwood" />
+
+        <div class="info">
+          <h1>Dave Ellwood</h1>
+          <h2>Head of School - Fine Arts</h2>
+          <p>
+            Dave completed his undergraduate studies at Auckland University’s
+            Elam School of Fine Arts in 1996 and has a PGDip in Teaching from
+            Auckland College of Education. He graduated with a Master of Fine
+            Arts (1st class honours) from Elam in 2003.
+          </p>
+        </div>
+      </div>
+
+      <div class="four">
+        <img class="photo" src="./peeps/amanda.png" alt="Amanda Levey" />
+
+        <div class="info">
+          <h1>Amanda Levey</h1>
+          <h2>Head of School - Creative Arts Therapies</h2>
+          <p>
+            Amanda gained her psychology degree from the University of
+            Melbourne, and did extensive training in the USA in the Halprin
+            Method, an integration of movement/dance, visual arts, performance
+            techniques and therapeutic practices.
+          </p>
+        </div>
+      </div>
+      <div class="five">
+        <img class="photo" src="./peeps/jess.png" alt="Jess Patterson" />
+
+        <div class="info">
+          <h1>Jess Patterson</h1>
+          <h2>Programme Leader - Certificate Art & Design</h2>
+          <p>
+            Jess received her Bachelor of Fine Arts from Whitecliffe College in
+            2005. Prior to that she taught Expressive Arts in Papua New Guinea
+            and had the privilege to work with the Yeraki people as they
+            recorded their traditional arts practises culminating in a book
+            called People and Plants.
+          </p>
+        </div>
+      </div>
+      <div class="six">
+        <img class="photo" src="./peeps/valerie.png" alt="Valerie Denny" />
+
+        <div class="info">
+          <h1>Valerie Denny</h1>
+          <h2>Programme Leader - Fashion Tech</h2>
+          <p>
+            Growing up in a family of tailors and dressmakers, Valerie was
+            encouraged from a young age to create her own clothes with a varying
+            degree of success. This was the catalyst that inspired her journey
+            into fashion education; first as a student and later, as a
+            practitioner of fashion education.
+          </p>
+        </div>
+      </div>
+      <div class="seven">
+        <img class="photo" src="./peeps/shirley.png" alt="Shirley Marks" />
+
+        <div class="info">
+          <h1>Shirley Marks</h1>
+          <h2>Lecturer</h2>
+          <p>
+            After gaining a Bachelor of Counselling at the end of 2013, Shirley
+            worked in two NGO with people of all ages who had an abuse history
+            or who had experienced other traumatic events.
+          </p>
+        </div>
+      </div>
+      <div class="eight">
+        <img class="photo" src="./peeps/simon.png" alt="Simon Dowman" />
+
+        <div class="info">
+          <h1>Simon Dowman</h1>
+          <h2>Lecturer</h2>
+          <p>
+            Simon received his BFA from Whitecliffe in 2002, and a MFA with
+            honours from Auckland University’s Elam School of Fine Arts in 2004.
+            He has had success exhibiting throughout New Zealand as well as
+            offshore in Melbourne, Sydney, Berlin and Vienna.
+          </p>
+        </div>
+      </div>
+      <div class="nine">
+        <img class="photo" src="./peeps/shaun.png" alt="Shaun Huri" />
+
+        <div class="info">
+          <h1>Shaun Huri</h1>
+          <h2>Lecturer</h2>
+          <p>
+            Shaun is a graphic designer based in Auckland, New Zealand with
+            nearly a decade of experience. He graduated in 2010 from with a
+            Bachelor of Design AUT, Shaun’s teaching and typographic practice
+            revolves around internet and documenting contemporary culture,
+            whether that be in print, video and everything in between.
+          </p>
+        </div>
+      </div>
+      <div class="ten">
+        <img class="photo" src="./peeps/niamh.png" alt="Niamh Steedman" />
+
+        <div class="info">
+          <h1>Niamh Steedman</h1>
+          <h2>Lecturer</h2>
+          <p>
+            Rebecca holds a Master of Fine Arts from Elam School of Fine Art,
+            University of Auckland and a Graduate Diploma in Computer Publishing
+            and Design, Auckland University of Technology.
+          </p>
+        </div>
+      </div>
+      <div class="eleven">
+        <img class="photo" src="./peeps/phillip.png" alt="Phillip Symonds" />
+
+        <div class="info">
+          <h1>Phillip Symonds</h1>
+          <h2>Senior Lecturer</h2>
+          <p>
+            Phillip completed his undergraduate studies at the Michaelis School
+            of Fine Art, University of Cape Town and subsequently completed his
+            MA (Art Education) at the Rhode Island School of Design, Providence,
+            Rhode Island, US.
+          </p>
+        </div>
+      </div>
+      <div class="twelve">
+        <img class="photo" src="./peeps/joseph.png" alt="Joseph Nairn" />
+
+        <div class="info">
+          <h1>Joseph Nairn</h1>
+          <h2>Lecturer</h2>
+          <p>
+            Joseph has been an IT professional for 20 years having managed and
+            owned several IT and web development companies. His specialities are
+            in web development and computer servicing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

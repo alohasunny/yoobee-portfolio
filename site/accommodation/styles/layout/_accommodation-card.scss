@@ -1,0 +1,35 @@
+.accom-card {
+  border: 1px solid $gray-200;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .prices {
+    display: flex;
+
+    .night-price {
+      color: $gray-600;
+      margin-right: 15px;
+    }
+
+    .total-price {
+      color: $gray-400;
+    }
+  }
+
+  .accom-name {
+    margin-top: 10px;
+    font-size: larger;
+  }
+
+  .accom-details {
+    align-items: center;
+    padding: 5px 15px;
+  }
+}
